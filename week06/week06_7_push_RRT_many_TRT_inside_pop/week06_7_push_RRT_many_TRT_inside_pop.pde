@@ -1,41 +1,38 @@
-//week06-7_push_RRT_many_TRT_inside_pop
-//慢慢組合出機械手臂
+// week06-7_push_RRT_many_TRT_inside_pop
 void setup(){
   size(500,800,P3D);
 }
 void draw(){
-  background(255);
-  translate(width/2,height/2);
-  sphere(10);
-  
-  fill(252,131,77);
+  background(255); // Step00 設定背景顏色
+  translate(width/2,height/2); // Step01 將原點移至畫面中心
+  sphere(10); // Step02 繪製中心參考球體
+
+  fill(252,131,77); // Step03 設定手臂顏色
   pushMatrix();
     if(mousePressed && mouseButton==RIGHT)
-      rotateY(radians(frameCount));
+      rotateY(radians(frameCount)); // Step04 沿著 Y 軸旋轉
     if(mousePressed && mouseButton==RIGHT)
-      rotateZ(radians(frameCount));
-    translate(0,-100);
-    box(50,200,25);//Step03手臂
+      rotateZ(radians(frameCount)); // Step05 沿著 Z 軸旋轉
+    translate(0,-100); // Step06 向上平移，調整手臂位置
+    box(50,200,25); // Step07 繪製手臂
 
-    pushMatrix();//Step04新的一組
-      translate(0,-100);
-      rotateZ(radians(frameCount));
-      translate(100,0);//Step05新的轉動
-      //Step03程式往又縮排
-      box(200,50,25); //Step05手肘
-      
-      pushMatrix();//Step03程式往又縮排
-        translate(100,0);//Stpe01把前一步發現的100,0放好
-        rotateZ(radians(frameCount));//Step02把剛剛的if(mousePressed)刪掉
-        translate(25,0,0);//Step02只轉動
-        box(50,25,50);
+    pushMatrix();
+      translate(0,-100); // Step08 移動至手臂頂端
+      rotateZ(radians(frameCount)); // Step09 沿著 Z 軸旋轉
+      translate(100,0); // Step10 移動至手肘右端
+      box(200,50,25); // Step11 繪製手肘
+
+      pushMatrix();
+        translate(100,0); // Step12 移動至手腕右端
+        rotateZ(radians(frameCount)); // Step13 沿著 Z 軸旋轉
+        translate(25,0,0); // Step14 向右平移，將手腕左端放置於圓心
+        box(50,25,50); // Step15 繪製手腕
       popMatrix();
-     popMatrix();
-   popMatrix();
+    popMatrix();
+  popMatrix();
 }
-float x=0,y=0;//Step06 會動的位置
-void mouseDragged(){ //Step06
+float x=0,y=0;
+void mouseDragged(){
   x+=mouseX-pmouseX;
   y+=mouseY-pmouseY;
-  println("x:" +x +"y" +y); //Step07 印出來
 }
