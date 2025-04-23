@@ -1,7 +1,5 @@
-# macOS 系統自動生成的檔案
 .DS_Store
 
-# Processing 輸出與暫存資料夾
 *.class
 *.exe
 *.jar
@@ -9,7 +7,6 @@
 *.tmp
 *.log
 
-# Processing IDE 的 build output（選用）
 application.linux32/
 application.linux64/
 application.windows32/
@@ -18,14 +15,12 @@ application.macosx/
 application.macosx32/
 application.macosx64/
 
-# 不要加進版控的圖片或影片輸出（如果不需要的話）
 *.png
 *.jpg
 *.gif
 *.mp4
 *.mov
 
-# VSCode 或其他 IDE 暫存檔
 .vscode/
 .idea/
 *.swp
