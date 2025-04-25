@@ -15,7 +15,6 @@ application.macosx/
 application.macosx32/
 application.macosx64/
 
-
 .vscode/
 .idea/
 *.swp
