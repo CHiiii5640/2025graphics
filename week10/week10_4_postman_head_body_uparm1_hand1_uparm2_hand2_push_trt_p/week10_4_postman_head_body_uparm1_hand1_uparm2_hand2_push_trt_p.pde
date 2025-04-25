@@ -17,12 +17,12 @@ void draw(){
   rect(0, 0, 560, 560); // 蓋上去
   pushMatrix(); // 要畫左邊的上手臂、手肘
     translate(+185, +261);
-    //rotate(radians(mouseX));
+    rotate(radians(mouseX));
     translate(-185, -261);
     image(uparm1, 0, 0); // 上手臂
     pushMatrix();
       translate(+116, +265);
-      //rotate(radians(mouseX));
+      rotate(radians(mouseX));
       translate(-116, -265);
       image(hand1, 0, 0);
     popMatrix();
@@ -30,7 +30,7 @@ void draw(){
   
   pushMatrix(); // 要畫右邊的上手臂、手肘
     translate(290, 262);
-    //rotate(radians(mouseX));
+    rotate(radians(mouseX));
     translate(-290, -262);
     image(uparm2, 0, 0);
     pushMatrix();
@@ -43,7 +43,7 @@ void draw(){
   
   pushMatrix();
     translate(+236, +231); // 再放回去正確的位置
-    //rotate(radians(mouseX));
+    rotate(radians(mouseX));
     translate(-236, -231); // 把頭的旋轉中心, 放到(0,0)
     image(head, 0, 0); // 再畫頭
   popMatrix();
