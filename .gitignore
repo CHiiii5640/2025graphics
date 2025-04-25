@@ -15,11 +15,6 @@ application.macosx/
 application.macosx32/
 application.macosx64/
 
-*.png
-*.jpg
-*.gif
-*.mp4
-*.mov
 
 .vscode/
 .idea/
